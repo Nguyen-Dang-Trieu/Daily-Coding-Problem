@@ -2,6 +2,10 @@
 The types `intptr_t` and `uintptr_t` are used for *storing pointer addresses*. They provide a portable and safe way of declaring pointers, and will be the same size as the underlying pointer used on the system. 
 ***They are useful for converting pointers to their integer representation.***
 
+To explain "*They are useful for converting pointers to their integer representation*". We will look at the following `example_code.c`.
+~~~cpp
+~~~
+
 The following illustrates how to use `intptr_t` and `uintptr_t`:
 ~~~cpp
 #include <stdio.h>
