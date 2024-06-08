@@ -2,11 +2,34 @@
 The types `intptr_t` and `uintptr_t` are used for *storing pointer addresses*. They provide a portable and safe way of declaring pointers, and will be the same size as the underlying pointer used on the system. 
 ***They are useful for converting pointers to their integer representation.***
 
-To explain "*They are useful for converting pointers to their integer representation*". We will look at the following `example_code.c`.
+- To explain "*They are useful for converting pointers to their integer representation*". We will look at the following `example_code.c`.
 ~~~cpp
+#include <iostream>
+#include <stdint.h>  // To use uintptr_t
+
+int main() {
+    int x = 42;    // Declare variable x
+    int* ptr = &x; // Declare a pointer pointing to x
+
+    // Print the address of x as a pointer
+    std::cout << "Address of x (as a pointer): " << ptr << std::endl;
+
+    // Convert the pointer to an integer
+    uintptr_t intAddress = reinterpret_cast<uintptr_t>(ptr);
+
+    // Print the address of x as an integer
+    std::cout << "Address of x (as an integer): " << intAddress << std::endl;
+
+    return 0;
+}
+~~~
+**Output:**
+~~~cpp
+Address of x (as a pointer): 0x7ffd088c3584
+Address of x (as an integer): 140724746859908
 ~~~
 
-The following illustrates how to use `intptr_t` and `uintptr_t`:
+- The following illustrates how to use `intptr_t` and `uintptr_t`:
 ~~~cpp
 #include <stdio.h>
 #include <stdint.h>  // Để sử dụng uintptr_t và intptr_t
