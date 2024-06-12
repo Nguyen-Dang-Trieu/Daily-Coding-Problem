@@ -8,41 +8,7 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 Follow-up: what if you can't use division?
 */
 
-/* Solution 1: Me
-#include <stdio.h>
-#include <stdint.h>
-
-int* resolve(int *arr, int n){
-    int arr_left[n-1];
-    int arr_right[n-1];
-
-    int* arr_result = (int*)malloc(n*sizeof(int));
-    for(int i = 0; i < 5;i++){
-        int multi_right = 1;
-        int multi_left = 1;
-        for(int j = i + 1;j < n;j++){
-            multi_right *= arr[j];
-        }
-        if(i != 0){
-             for(int j = 0; j < i;j++){
-            multi_left *= arr[j];}
-
-        }
-        arr_result[i] = multi_right*multi_left;
-    }
-    return arr_result;
-}
-int main() {
-    int arr[] = {3, 2, 1};
-    int n = 3;
-    int *result = resolve(arr,3);
-    for(int i = 0;i < n;i++){
-        printf("%d ", result[i]);
-    }
-    return 0;
-} */
-
-// Solution 2: 
+// Solution 2: Tối ưu hơn Solution 1
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -87,5 +53,41 @@ int main() {
     free(result);
     return 0;
 }
+
+
+/* Solution 1: Me
+#include <stdio.h>
+#include <stdint.h>
+
+int* resolve(int *arr, int n){
+    int arr_left[n-1];
+    int arr_right[n-1];
+
+    int* arr_result = (int*)malloc(n*sizeof(int));
+    for(int i = 0; i < 5;i++){
+        int multi_right = 1;
+        int multi_left = 1;
+        for(int j = i + 1;j < n;j++){
+            multi_right *= arr[j];
+        }
+        if(i != 0){
+             for(int j = 0; j < i;j++){
+            multi_left *= arr[j];}
+
+        }
+        arr_result[i] = multi_right*multi_left;
+    }
+    return arr_result;
+}
+int main() {
+    int arr[] = {3, 2, 1};
+    int n = 3;
+    int *result = resolve(arr,3);
+    for(int i = 0;i < n;i++){
+        printf("%d ", result[i]);
+    }
+    return 0;
+} */
+
 
 
