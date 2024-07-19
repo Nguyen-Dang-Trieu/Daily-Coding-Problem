@@ -1,1 +1,1 @@
-# Chưa làm xong Day3
+# Chưa biết ghi gì
