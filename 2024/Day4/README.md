@@ -13,7 +13,7 @@ Example: </br>
 +b = [ 2, 4, 1, 5], n = 4  => số cần tìm: 3 </br>
 +c = [ 7, 9, 8], n = 3 => số cần tìm: 1 </br>
 
-- Với số nguyên dương đã xuất hiện thì ta sẽ biến nó thành số âm tại index = số nguyên dương - 1.
+- Với số nguyên dương đã xuất hiện thì ta sẽ biến nó thành số âm tại `index = số nguyên dương - 1`.
 
 ## Reference 
 - https://christeena-borah.medium.com/daily-coding-problem-4-first-missing-positive-63e4dfdb38ce
