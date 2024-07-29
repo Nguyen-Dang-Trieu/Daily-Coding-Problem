@@ -21,7 +21,7 @@ class XORLinkedList{
 
         // Print the elements of the list
         void print_list(); 
-}
+};
 
 XORLinkedList::XORLinkedList(){
     head = tail = nullptr;
