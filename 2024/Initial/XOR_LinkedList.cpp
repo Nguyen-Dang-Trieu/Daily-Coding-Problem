@@ -2,6 +2,7 @@
 #include <stdint.h>  // To use uintptr_t
 using namespace std;
 
+// Để có thể làm hoàn thành bài này 1 cách dễ dàng thì MỘT NGUYÊN TẮC CẦN PHẢI NHỚ:    " NODE NEXT = NODE CURRENT ^ NODE PREVIOUS. " 
 
 struct Node {
     int data;
